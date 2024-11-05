@@ -204,7 +204,7 @@ p {
 }
 
 #contact-section {
-  position: fixed;
+  position: fixed; /* add fixed position so element is fixed in place and on top when visable*/
   top: 100px;
   right: 0;
   left: 0;
