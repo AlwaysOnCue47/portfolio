@@ -7,6 +7,7 @@
     <title>Portfolio Assignment</title>
 
     <link href="./CSS/styles.css" rel="stylesheet"> <!-- my CSS sheet -->
+    <script defer src="./js/main.js"></script>
 
   </head>
   <body id="home">
@@ -16,10 +17,25 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#contact1">Contact</a></li>
+          <li><a onclick="showContactBox()">Contact</a></li>
         </ul>
       </nav>
    <!--END NAV -->
+     <!-- CONTACT FORM-->
+
+  <div class="hide" id="contact-section" >  
+    <div class="contact-wrap2">
+      <div class="contact">
+        <form action="https://formspree.io/f/xqakkbky" method="post">
+          Name: <input type="text" name="name"><br>
+          Email: <input type="email" name="email"><br>
+          Comment: <input type="text" name="comment"><br>
+          <input id="submitButton" type="submit" value="Submit">
+        </form>
+        <button id="cancelButton" onclick="hideContactBox()">Cancel</button>
+      </div>
+    </div>    
+  </div>
 
    <!-- Hero section- background video and text overlay -->
 
@@ -77,29 +93,9 @@
           </div>
         </div>
       </div>
-      <div id="contact1"></div>
     </div>
    
     <!-- END of ABOUT SECTION -->
-
-  <!-- CONTACT FORM-->
-  <h1 >CONTACT</h1>
-  <div class="contact-section">  
-    <div class="contact-wrap1">
-      <!--<img class="box-pic2" src="./images/message in a bottle.jpg">-->
-      <h3 class="center">Complete the form to the right for any questions or feedback</h3>
-    </div>
-    <div class="contact-wrap2">
-      <div class="contact">
-        <form action="https://formspree.io/f/xqakkbky" method="post">
-          Name: <input type="text" name="name"><br>
-          Email: <input type="email" name="email"><br>
-          Comment: <input type="text" name="comment"><br>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-    </div>    
-  </div>
 
      <!-- FOOTER  -->
       <footer>
@@ -110,7 +106,8 @@
           </div>
           <div class="footer-wrap">
             <p class="center"> &copy; copyright. legal stuff</p>
-          <img class="avatar2" src="./images/avatar2.png">
+            <img class="avatar2" src="./images/avatar2.png">
+            <button id="submitButton" onclick="showContactBox()">CONTACT</button>
 
           </div>
           
