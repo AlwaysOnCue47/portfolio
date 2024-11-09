@@ -39,10 +39,10 @@
   align-items: center;
   background-color: aquamarine;
   box-shadow: 3px 3px 6px rgb(5, 255, 59);
-  box-shadow:  inset 3 -3px -6px red;
   column-gap: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-radius: 20px;
 }
 
 .fade-out {
