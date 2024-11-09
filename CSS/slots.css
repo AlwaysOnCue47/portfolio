@@ -9,6 +9,7 @@
 }
 .slotsGame {
   z-index: 2; /* because it's overlaping the fadeout of the above section div*/
+  scroll-margin-top: 70px;
   margin: auto;
   display: block;
   margin-top: -50px;

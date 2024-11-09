@@ -29,6 +29,7 @@ function restoreCredits() {
 }
 
 function spin() {
+  document.getElementById("spinButton").disabled = true;
   gameMessage.innerHTML = "&#128565;"
   if (credits == 0 ) {
     console.log("no more spins");
@@ -50,7 +51,7 @@ function spin() {
     if ((slot1 == slot2) && (slot1 == slot3)) {
       console.log("WINNER WINNER CHICKEN DINNER!");
       setTimeout(() => {
-        gameMessage.innerHTML = "&#128514; winner winner chicken dinner!!"
+        gameMessage.innerHTML = "&#128514; WINNER WINNER CHICKEN DINNER!!"
 
       },1000);
       
@@ -71,10 +72,8 @@ function spin() {
     else {
       setTimeout(() => {
         gameMessage.innerHTML = "&#128534"
-    
       },1000);
     }
-      
 
     console.log(items);
     console.log(X, Y, Z);
@@ -87,11 +86,12 @@ function spin() {
         alert("Better Luck Next Time");
         const newGame = document.getElementById("newGame");
         newGame.classList.remove("hide");
-
       }
-      
     },1000);
-
   }
+
+  setTimeout(() => {
+    document.getElementById("spinButton").disabled = false;
+  }, 1200);
 
 }
