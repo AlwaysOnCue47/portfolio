@@ -7,7 +7,9 @@
     <title>Portfolio Assignment</title>
 
     <link href="./CSS/styles.css" rel="stylesheet"> <!-- my CSS sheet -->
+    <link href="./CSS/slots.css" rel="stylesheet"> <!-- slots game styles-->
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/slots.js"></script> <!-- slots game script-->
 
   </head>
   <body id="home">
@@ -96,6 +98,31 @@
     </div>
    
     <!-- END of ABOUT SECTION -->
+     <!-- Slots game-->
+     <div class="slotsGame">
+      <div class="gameWrapper">
+        <P id="slotsInfo">a simple slot machine game made by me</P>
+        <h3 id="title">MARTIN'S SLOT-MACHINE GAME</h3>
+        <div class="gameContainer">
+          <img class="slot" id="slot1" src="./images/insertcoin.jpg" >
+          <img class="slot" id="slot2" src="./images/insertcoin.jpg" >
+          <img class="slot" id="slot3" src="./images/insertcoin.jpg" >
+        </div>
+        <div id="gameControlsContainer">
+          <button id="spinButton" onclick="spin()">SPIN!</button>
+          <div id="creditsWrapper">
+            <h4>Credits:</h4>
+          </div>
+          <div class="emojiBox">
+            <button class="hide" id="newGame" onclick="restoreCredits()">New Game</button>
+            <h5 id="credits">100</h5>
+            <p id="gameMessage">&#128526;</p>
+          </div>
+          
+        </div>
+      </div>
+     </div>
+     <!-- end slots game section-->
 
      <!-- FOOTER  -->
       <footer>
