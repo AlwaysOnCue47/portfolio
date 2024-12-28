@@ -1,0 +1,38 @@
+#ball {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: darkred;
+  border-radius: 25px;
+}
+
+#container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: lightgreen;
+  height: 400px;
+  width: 600px;
+  margin: auto;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#gameBox {
+  display: flex;
+}
+
+button {
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 16px;
+  text-align: center;
+
+}
