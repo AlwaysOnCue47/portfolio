@@ -1,148 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./javascript/main.js"></script> <!---->
+  <title>Portfolio v0.3</title>
+</head>
+<body>
+  <video autoplay muted loop id="video"><source src="./images/3129671-uhd_3840_2160_30fps.mp4" type="video/mp4"></video>
+  <!-- NAVBAR-->
 
-    <title>Portfolio Assignment</title>
+  <nav>
+      <input type="checkbox" id="sidebarActive">
+    <label for="sidebarActive" class="openSidebarButton">
+      <img src="./images/burger-menu-svgrepo-com.svg" width="36" height="36">
+    </label>
 
-    <link href="./CSS/styles.css" rel="stylesheet"> <!-- my CSS sheet -->
-    <link href="./CSS/slots.css" rel="stylesheet"> <!-- slots game styles-->
-    <script defer src="./js/main.js"></script>
-    <script defer src="./js/slots.js"></script> <!-- slots game script-->
+    <label id="overlay" for="sidebarActive"></label>
+    <div class="linksContainer">
+      <label for="sidebarActive" class="closeSidebarButton">
+        <img src="./images/close-rectangle-svgrepo-com.svg" width="24" height="24">
+      </label>
+      
+      <a class="homeLink" href="#">Home</a>        
+      <a href="#aboutSection">About</a>
+      <a href="#contentsSection">Demos</a>
+      <a href="#contactSection">Contact</a>
+      <a href="#footerSection">Footer</a>
+    </div>
+  </nav>
 
-  </head>
-  <body id="home">
-     <!-- NAV -->
-      <nav class="navbar">
-          <a href="#home"><img class="logo" src="./images/logo4AB.PNG" alt="Logo"></a>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#slotsGame">Game</a></li>
-          <li><a href="./ball.html">Ball</a></li>
-          <li><a onclick="showContactBox()">Contact</a></li> <!-- this item will show the contact box when clicked-->
-        </ul>
-      </nav>
-   <!--END NAV -->
-     <!-- CONTACT FORM-->
-
-  <div class="hide" id="contact-section" >  
-    <div class="contact-wrap2">
-      <div class="contact">
-        <form action="https://formspree.io/f/xqakkbky" method="post">
-          Name: <input type="text" name="name"><br>
-          Email: <input type="email" name="email"><br>
-          Comment: <input type="text" name="comment"><br>
-          <input id="submitButton" type="submit" value="Submit">
-        </form>
-        <button id="cancelButton" onclick="hideContactBox()">Cancel</button> <!-- this button hides the contact box-->
+   <!-- END NAVBAR-->
+   
+   <!-- HERO SECTION -->
+  <div class="backgroundBox">
+    <div class="container">
+      <div id="heroSection">
+        <div id="heroSectionLeft">
+          <img id="avatarImage" src="./images/avatar.png">
+          <div id="heroSectionCard1">
+            <div id="heroSectionTitle">
+              <h1 style="text-shadow: 2px 2px 2px #444444;">Martin Fobert</h1>
+            </div>
+            <div>
+              <p class="textFormat1">Software and Web Developer</p> 
+              <p class="textFormat1">Javascript, CSS, HTML</p>
+              <p class="textFormat1">Visual Studio / C# / .NET Framework</p>
+              <P class="textFormat1">PC Support Specialist</P>
+              <div id="iconContainer">
+                <img class="iconLogo" src="./images/icons/JS logo - 512.png" alt="javascript logo">
+                <img class="iconLogo" src="./images/icons/css 3 logo -512.png" alt="CSS logo">
+                <img class="iconLogo" src="./images/icons/html5 logo 512.png" alt="HTML logo">
+                <img class="iconLogo" src="./images/icons/bootstrap logo - 512.png" alt="Bootstrap logo">
+                <img class="iconLogo" src="./images/icons/Visual-Studio logo - 256.png" alt="Visual Studio logo">
+                <img class="iconLogo" src="./images/icons/NET-Framework Logo - 512.png" alt="dot NET logo">
+                <img class="iconLogo" src="./images/twitter_thumb_201604_CompTIA_A_2B.png" alt="A plus certified">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="heroSectionRight">
+          <div id="heroSectionCard2">
+            <p class="textFormat2">I believe that computer programming is where art and science collide. 
+            Where logic and mathematics meets creativity and imagination.</p>
+          </div>  
+        </div>
       </div>
-    </div>    
+    </div>
+  </div>
+  
+  <!-- END HERO SECTION -->
+
+  <!-- ABOUT SECTION -->
+
+  <div class="container">
+    <div style="box-shadow: 0px 5px 3px rgba(0, 0, 0, .4);">
+      <div id="aboutSectionTitle">
+        <div class="littleBox"></div>
+        <h1 style="margin-left: 12px;">About</h1>
+      </div>
+    </div>
+    <div id="aboutSection">
+      <div id="aboutSectionRow" class="aboutSectionBorder">
+        <p>I have been a PC Support Specialist for over twelve years. That's an 'Operating System and Hardware Technician'. I've worked with Microsoft Operating systems from DOS 6.2 to Windows 11 and all the major stops in between. While working with Best Buy's Geek Squad, Canada Computers' Service Dept. and as an independant consultant I have assembled a plethora of desktop computers. Repaired hundreds of laptops. And was even a Samsung Authorized mobile device repair technician. I've spent years learning all about how to assemble, install and service all sorts of hardware and software platforms. And I'd say I'm pretty good at it. After years of being a technician I have decided to enter the field of software development. I know how computers work, now I want to instruct computers how to work. </p>
+      </div>
+      <div id="aboutSectionRow" class="backgroundImage2">
+        <div class="aboutTextBackgroundBox">
+          <p class="cardText">"Computers don't make mistakes. What they do they do on purpose."</p>
+          <p class="quote">~ Dale Gribble</p>
+        </div>     
+      </div>
+      <div id="aboutSectionRow" class="backgroundImage1">
+        <div class="aboutTextBackgroundBox">
+          <p class="cardText">"Captain, the computer does not judge. It makes logical selections."</p>
+          <p class="quote">~ Spock</p>
+        </div>        
+      </div>
+      <div id="aboutSectionRow" class="aboutSectionBorder backgroundImage3">
+        <p>Check out my <a href="https://github.com/AlwaysOnCue47" target="_blank">GITHUB</a> account!
+        There you will find a few projects of mine in HTML/CSS/JavaScript and C# with .NET Framework.
+        You can also find the code for the program demos showcased below.</p>
+      </div>
+    </div>
   </div>
 
-   <!-- Hero section- background video and text overlay -->
+  <!-- END ABOUT SECTION -->
 
-   <video autoplay muted loop id="video"><source src="./videos/Typing.mp4" type="video/mp4"></video>
+  <!-- CONTENTS SECTION -->
 
-    <div class="video-text">
-      <div>
-        <img  class="avatar" src="./images/avatar.png" alt="avatar">
-      </div>
-      <div><h1 class="center">Martin Fobert</h1>
-        <h3 class="center">Developer in Training - Portfolio in the Making</h3>
-      </div>
-    </div>
-
-    <!-- END of HERO section-->
-    <!-- ABOUT SECTION -->
-    
-     <div id="about" class="about-section">
-      <h1>ABOUT</h1>
-      <div class="about-container">
-          <div  class="about-box">
-            <div class="about-box-content">
-              <p class="center">I've been a PC Support Specialist for over twelve years. That's an 'Operating System and Hardware Technician'. I've worked with Microsoft Operating systems from DOS 6.2 to Windows 11 and all the major stops in between. While working with Best Buy's Geek Squad, Canada Computers' Service Dept. and as an independant consultant I have assembled a plethora of desktop computers. Repaired hundreds of laptops. And was even a Samsung Authorized mobile device repair technician. I've spent years learning all about how to assemble, install and service all sorts of hardware and software platforms. And I'd say I'm pretty good at it...
+   <div class="backgroundBox" >
+    <div style="min-height: 400px;"class="container">
+      <div style="box-shadow: -6px 6px 3px rgba(0, 0, 0, 0.4); border-radius: 5px;">
+        <div id="programSectionTitle">
+          <div class="littleBox2"></div>
+          <h1  style="margin-left: 12px; color: rgb(28, 182, 74);">Program Demos</h1>
+        </div>
+      </div>     
+      <div id="contentsSection">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+         <div class="mySlides fade">
+           <div class="numbertext">1 / 3</div>
+           <div class="demoCard">
+            <div class="demoCardTextBox">
+              <p>
+                I've put together this small program to demonstrate some of the aspects of Object Oriented Programming. This program makes use of JavaScript's canvas element. A single Class Constructer or "blueprint" is used to define the objects or in this case the circles. Using variables for X and Y coordinates plus a radius length and fill color the constructor has all the properties needed to draw a circle of any size and color anywhere on the canvas.
               </p>
-              <p class="center">Now, I would like to learn how to program.</p>
-              <div class="little-box"></div>
-             
+              <div><img style="margin-top: 10px; margin-bottom: 10px;"  src="./images/Capture2.PNG" alt="class constructor"></div>
+              <p> In addition to the object's properties each object has it's own behaviour. One follows the mouse postion and the other changes colour when it detects contact (or collision) with the other object.</p>
+              <p>
+                How does the object know when a collision has taken place? Why using trigonometry of course. Imagine a right angle triangle being drawn from the centre of one circle to the centre of the other circle.
+              </p>
             </div>
+            <div class="demoCardTextBox">             
+              <div><img src="./images/Capture.PNG" style="margin-top: 10px; margin-bottom: 10px;" alt="Illustration of right angles between objects"></div>
+              <p>Since the program has the value for each circle's X and Y coordinates the exact lengths of the triangles horizontal and vertical sides can be easily determined. With that information we can use a simple trigonometry formula to calculate the length of the unknown side. When that length is less than the sum of each circles radius then a collision has occured. </p>
+              <div><img style="margin-top: 10px; margin-bottom: 10px;" src="./images/Capture4.PNG" alt="Get distance equation"></div>
+            </div>
+            <div class="demoCardTextBox">
+              <p>Give it a try!</p>
+              <div><canvas id="canvas1" style="margin-top: 10px; margin-bottom: 10px;"></canvas></div>
+              <p>Using this simple collision detection formula, or object behaviour, we can program the circles to do more than simply change colour. If we give the circles  the properties 'velocity' and 'mass' with a little bit more trigonometry the circles can bounce off each other and the sides of the canvas. 
+                Check out the NEXT SLIDE.
+              </p>
+            </div>            
+           </div>
+           <div class="text">Collision Detection</div>
+         </div>
+         <div class="mySlides fade">
+           <div class="numbertext">2 / 3</div>
+           <div class="demoCard">
+            <div class="demoCardTextBox">
+              <p>
+                Making use of JavaScript's 'requestAnimationFrame' function we can add movement to the program. In the constructor for these circles two more properties have been added. X axis velocity and Y axis velocity. 
+              </p>
+              <div><img style="margin-top: 10px;" src="./images/Capture3.PNG" alt="class constructor"></div>
+            </div>
+            <div class="demoCardTextBox">
+              <canvas id="canvas2"></canvas>
+            </div>            
           </div>
-        <div class="aboutwrap"> 
-          <div  class="about-box">
-            <img class="box-pic" src="./images/Development.jpg">
-            <div class="about-text">
-              <p class="center">"All I needed now was a computer. And a ten year old kid to teach me how to use it."</p>
-              <p class="quote">~ 'Fletch'</p>
-            </div>
-          </div>  
-        </div>   
+           <div class="text">Collision and Reaction</div>
+         </div>
+         <div class="mySlides fade">
+           <div class="numbertext">3 / 3</div>
+           <div class="demoCard"><img style="width: 330px;" src="./images/betaGameScreenCapture.png" alt="Game Screen Capture"></div>
+           <div class="text">Complete Computer Game</div>
+         </div>
+         <!-- Next and previous buttons -->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+       </div>
+       <br>
+        <!-- The dots/circles -->
+       <div style="text-align:center">
+         <span class="dot" onclick="currentSlide(1)"></span>
+         <span class="dot" onclick="currentSlide(2)"></span>
+         <span class="dot" onclick="currentSlide(3)"></span>
+       </div>
       </div>
+    </div>
+   </div>
+   
+  <!-- END CONTENTS SECTION -->
 
-      <div class="about-container">
-        <div class="aboutwrap">
-        <div  class="about-box">
-          <img class="box-pic" src="./images/nervous-system-braint.png">
-          <div class="about-text">
-            <p class="center">"Computers don't make mistakes. What they do they do on purpose."</p>
-            <p class="quote">~ Dale Gribble</p>
+  <!-- FOOTER -->
+  <div id="footerBackgroundBox">
+    <!-- CONTACT SECTION -->
+    <div class="container" style="padding-top: 10px;">
+      <div style="box-shadow: 0px 5px 3px rgba(0, 0, 0, .4); border-radius: 5px;">
+        <div id="aboutSectionTitle" style="margin-left: 0px;">
+          <div class="littleBox"></div>
+          <h1 style="margin-left: 12px;">Contact</h1>
+        </div>
+      </div>
+      <div id="contactSection">    
+        <div id="contactSubSection2">
+          <div class="glassBackground">
+            <h1 class="textFormat3" style="font-size: 20pt;">Get in Touch!</h1>
+            <p class="textFormat3">Questions? Comments? Compliments? Critiques? Looking for a software developer? Feel free to reach out by filling out the contact form. I'd be happy to hear from you!</p>
           </div>
         </div>
-        </div>
-        <div  class="about-box">
-          <div class="about-box-content">
-            <h3 class="center">Check out my GitHub Repository</h3>
-            <a href="https://github.com/AlwaysOnCue47" target="_blank"><img class="git-logo" src="./images/GitHub-Mark-ea2971cee799.png" width="200px" alt="GitHub logo"></a> 
+        <div id="contactSubSection1">
+          <div id="contactForm">
+            <form action="https://formspree.io/f/xqakkbky" method="post">
+              Name: <input type="text" name="name"><br>
+              Email: <input type="email" name="email"><br>
+              Comment: <input type="text" name="comment"><br>
+              <input type="submit" value="Submit">
+            </form>
           </div>
         </div>
       </div>
     </div>
-   
-    <!-- END of ABOUT SECTION -->
-     <!-- Slots game-->
-     <div class="slotsGame" id="slotsGame">
-      <div class="gameWrapper">
-        <P id="slotsInfo">a simple slot machine game made by me</P>
-        <h3 id="title">MARTIN'S SLOT-MACHINE GAME</h3>
-        <div class="gameContainer">
-          <img class="slot" id="slot1" src="./images/insertcoin.jpg" >
-          <img class="slot" id="slot2" src="./images/insertcoin.jpg" >
-          <img class="slot" id="slot3" src="./images/insertcoin.jpg" >
+    <!-- END CONTACT SECTION -->
+    <div class="container" style="margin-bottom: 0;">
+      <div id="footerSection">
+        <div id="footerText">
+          <p> An AlwaysOnCue&trade; Production</p>
+          <a href="https://github.com/AlwaysOnCue47" target="_blank">GITHUB</a>
+          <a href="#">Back to top</a>
+          <p>Legal stuff. Copyright&copy;</p>
+          <p>Made in CANADA&#127809;</p>
         </div>
-        <div id="gameControlsContainer">
-          <button id="spinButton" onclick="spin()">SPIN!</button>
-          <div id="creditsWrapper">
-            <h4>Credits:</h4>
-          </div>
-          <div class="emojiBox">
-            <button class="hide" id="newGame" onclick="restoreCredits()">New Game</button>
-            <h5 id="credits">100</h5>
-            <p id="gameMessage">&#128526;</p>
-          </div>
-          
+        <div class="spaceship-container">
+         <div class="item1"><img class="spaceship" src="./images/spaceship.png"></div>
         </div>
       </div>
-     </div>
-     <!-- end slots game section-->
+    </div>
+  </div>
 
-     <!-- FOOTER  -->
-      <footer>
-        <div class="footer-banner">
-          
-          <div class="spaceship-container">
-            <div class="item1"><img class="spaceship" src="./images/spaceship.png"></div>
-          </div>
-          <div class="footer-wrap">
-            <p class="center"> &copy; copyright. legal stuff</p>
-            <img class="avatar2" src="./images/avatar2.png">
-            <button id="submitButton" onclick="showContactBox()">CONTACT</button>
+  <!-- END FOOTER SECTION -->
 
-          </div>
-          
-        </div>
-
-      </footer>
-    
-  </body>
+</body>
 </html>
