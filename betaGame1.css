@@ -1,0 +1,79 @@
+/* styles for betaGame1 project */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(22, 22, 26);
+}
+
+div {
+  user-select: none;
+}
+
+#imageContainer {
+  display: none;
+}
+
+#gameContainer {
+  position: absolute;
+  display: grid;
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0, 167, 8);
+  background-color: rgb(0, 0, 60);
+  box-shadow: 12px 12px 8px rgb(32, 1, 61);
+}
+
+#gameTitle {
+  background-color: rgb(0, 0, 60);
+  margin: auto;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(170, 170, 170);
+  font-size: large;
+}
+
+#scoreBox {
+  color: rgb(255, 147, 6);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(65, 252, 252);
+  height: 40px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;;
+  align-items: center;
+}
+
+#newGameBtn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+#shields, #life, #transportShip, #level {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#infoBox {
+  display: flex;
+  justify-content: center;
+}
+

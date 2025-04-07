@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <script defer src="./javascript/main.js"></script> <!---->
-  <title>Portfolio v0.3</title>
+  <title>Portfolio v0.9</title>
 </head>
 <body>
   <video autoplay muted loop id="video"><source src="./images/3129671-uhd_3840_2160_30fps.mp4" type="video/mp4"></video>
   <!-- NAVBAR-->
 
   <nav>
-      <input type="checkbox" id="sidebarActive">
+    <input type="checkbox" id="sidebarActive">
     <label for="sidebarActive" class="openSidebarButton">
       <img src="./images/burger-menu-svgrepo-com.svg" width="36" height="36">
     </label>
@@ -27,7 +27,7 @@
       <a href="#aboutSection">About</a>
       <a href="#contentsSection">Demos</a>
       <a href="#contactSection">Contact</a>
-      <a href="#footerSection">Footer</a>
+      <a href="./betaGame1.html" target="_blank">Game</a>
     </div>
   </nav>
 
@@ -83,7 +83,7 @@
     </div>
     <div id="aboutSection">
       <div id="aboutSectionRow" class="aboutSectionBorder">
-        <p>I have been a PC Support Specialist for over twelve years. That's an 'Operating System and Hardware Technician'. I've worked with Microsoft Operating systems from DOS 6.2 to Windows 11 and all the major stops in between. While working with Best Buy's Geek Squad, Canada Computers' Service Dept. and as an independant consultant I have assembled a plethora of desktop computers. Repaired hundreds of laptops. And was even a Samsung Authorized mobile device repair technician. I've spent years learning all about how to assemble, install and service all sorts of hardware and software platforms. And I'd say I'm pretty good at it. After years of being a technician I have decided to enter the field of software development. I know how computers work, now I want to instruct computers how to work. </p>
+        <p>I have been a PC Support Specialist for over twelve years. That's an 'Operating System and Hardware Technician'. I've worked with Microsoft Operating systems from DOS 6.2 to Windows 11 and all the major stops in between. While working with Best Buy's Geek Squad, Canada Computers' Service Dept. and as an independent consultant I have assembled a plethora of desktop computers. Repaired hundreds of laptops. And was even a Samsung Authorized mobile device repair technician. I've spent years learning all about how to assemble, install and service all sorts of hardware and software platforms. And I'd say I'm pretty good at it. After years of being a technician I have decided to enter the field of software development. I know how computers work, now I want to instruct computers how to work. </p>
       </div>
       <div id="aboutSectionRow" class="backgroundImage2">
         <div class="aboutTextBackgroundBox">
@@ -125,24 +125,25 @@
            <div class="demoCard">
             <div class="demoCardTextBox">
               <p>
-                I've put together this small program to demonstrate some of the aspects of Object Oriented Programming. This program makes use of JavaScript's canvas element. A single Class Constructer or "blueprint" is used to define the objects or in this case the circles. Using variables for X and Y coordinates plus a radius length and fill color the constructor has all the properties needed to draw a circle of any size and color anywhere on the canvas.
+                I've put together a couple of small programs to demonstrate some of the aspects of Object Oriented Programming. This program makes use of JavaScript's canvas element. A single Class Constructor or "blueprint" is used to define the objects. In this case circles. Using variables for X and Y coordinates plus a radius length and fill colour the constructor has all the properties needed to draw a circle of any size and colour anywhere on the canvas.
               </p>
               <div><img style="margin-top: 10px; margin-bottom: 10px;"  src="./images/Capture2.PNG" alt="class constructor"></div>
               <p> In addition to the object's properties each object has it's own behaviour. One follows the mouse postion and the other changes colour when it detects contact (or collision) with the other object.</p>
-              <p>
-                How does the object know when a collision has taken place? Why using trigonometry of course. Imagine a right angle triangle being drawn from the centre of one circle to the centre of the other circle.
-              </p>
-            </div>
-            <div class="demoCardTextBox">             
-              <div><img src="./images/Capture1.png" style="margin-top: 10px; margin-bottom: 10px;" alt="right angles between objects"></div>
-              <p>Since the program has the value for each circle's X and Y coordinates the exact lengths of the triangles horizontal and vertical sides can be easily determined. With that information we can use a simple trigonometry formula to calculate the length of the unknown side. When that length is less than the sum of each circles radius then a collision has occured. </p>
-              <div><img style="margin-top: 10px; margin-bottom: 10px;" src="./images/Capture4.PNG" alt="Get distance equation"></div>
             </div>
             <div class="demoCardTextBox">
+              <p>
+                How does the object know when a collision has taken place? Why using trigonometry of course. Imagine a right angle triangle being drawn from the centre of one circle to the centre of the other circle.
+              </p>            
+              <div><img src="./images/Capture1.png" style="margin-top: 10px; margin-bottom: 10px;" alt="Illustration of right angles between objects"></div>
+              <p>Since the program has the value for each circle's X and Y coordinates the exact lengths of the triangles horizontal and vertical sides can be easily determined. With that information we can use a simple trigonometry formula to calculate the length of the unknown side. When that length is less than the sum of each circles radius then a collision has occured. </p>
+              
+            </div>
+            <div class="demoCardTextBox">
+              <div><img style="margin-top: 10px; margin-bottom: 10px;" src="./images/Capture4.PNG" alt="Get distance equation"></div>
               <p>Give it a try!</p>
-              <div><canvas id="canvas1" style="margin-top: 10px; margin-bottom: 10px;"></canvas></div>
-              <p>Using this simple collision detection formula, or object behaviour, we can program the circles to do more than simply change colour. If we give the circles  the properties 'velocity' and 'mass' with a little bit more trigonometry the circles can bounce off each other and the sides of the canvas. 
-                Check out the NEXT SLIDE.
+              <div><canvas id="canvas1"></canvas></div>
+              <p>Using this simple collision detection formula, or object behaviour, we can program the circles to do more than simply change colour. If we give the circles  variables for velocity in the X and Y directions with a little bit more trigonometry the circles can bounce off each other and the sides of the canvas. 
+              Check out the<a class="nextSlide" onclick="plusSlides(1)"> NEXT SLIDE. </a>
               </p>
             </div>            
            </div>
@@ -153,19 +154,41 @@
            <div class="demoCard">
             <div class="demoCardTextBox">
               <p>
-                Making use of JavaScript's 'requestAnimationFrame' function we can add movement to the program. In the constructor for these circles two more properties have been added. X axis velocity and Y axis velocity. 
+                Making use of JavaScript's 'requestAnimationFrame' function we can add movement to the program. I've added two more properties to the circles. An X and Y axis velocity. Every time the screen refreshes each circle adds the value of the X and Y velocities to it's X and Y positions then redraws itself. When a circle touches one of the sides the velocity for that axis is reversed. For example a +1 becomes -1. 
               </p>
+            </div>
+            <div class="demoCardTextBox">
+              <p>
+                At the same time each circle will calculate it's distance to every other circle on the canvas. Every time your browser refreshes the screen, usually 60 times per second, every circle will update it's position and check it's distance to all the other circles.  
+              </p> 
               <div><img style="margin-top: 10px;" src="./images/Capture3.PNG" alt="class constructor"></div>
             </div>
             <div class="demoCardTextBox">
-              <canvas id="canvas2"></canvas>
+              <p>
+                 When contact with another circle is detected some slightly more advanced trigonometry is used to calculate the resulting direction and velocities.
+              </p>
+              <div><canvas id="canvas2"></canvas></div>
+              <p>
+                Using some of these simple concepts combined with a little imagination all sorts of applications or games can be created! Check out the<a class="nextSlide" onclick="plusSlides(1)"> NEXT SLIDE </a> for my game demo! 
+              </p>
             </div>            
           </div>
            <div class="text">Collision and Reaction</div>
          </div>
          <div class="mySlides fade">
            <div class="numbertext">3 / 3</div>
-           <div class="demoCard"><img style="width: 330px;" src="./images/betaGameScreenCapture.png" alt="Game Screen Capture"></div>
+           <div class="demoCard">
+            <div class="demoCardTextBox">
+              <p>Like in my simple circle programs this program also uses only one class constructor or blueprint to generate all the objects in the game. From the user player, the enemy targets, projectiles and the stars in the background. Giving different objects different values for their constructor parameters and those objects calling different class functions or "object behaviours" one single class constructor can be used for every object needed in this game</p>
+              <p>Using the same collision detection formula, along with some event listeners, 'if' statements, a few more functions and a little imagination these concepts can be used to make a neat little space shooter game!</p>
+            </div>
+            <div class="demoCardTextBox">
+              <p>Give it a try! Click on the game image. It will open in a new tab</p>
+              <div>
+                <a href="./betaGame1.html" target="_blank"><img style="width: 330px; margin-top: 10px;" src="./images/betaGameScreenCapture.png" alt="Game Screen Capture" ></a>
+              </div>
+            </div>            
+          </div>
            <div class="text">Complete Computer Game</div>
          </div>
          <!-- Next and previous buttons -->
@@ -218,14 +241,14 @@
     <div class="container" style="margin-bottom: 0;">
       <div id="footerSection">
         <div id="footerText">
-          <p> An AlwaysOnCue&trade; Production</p>
-          <a href="https://github.com/AlwaysOnCue47" target="_blank">GITHUB</a>
           <a href="#">Back to top</a>
+          <a href="https://github.com/AlwaysOnCue47" target="_blank">GITHUB</a>
+          <p> An AlwaysOnCue&trade; Production</p>
           <p>Legal stuff. Copyright&copy;</p>
           <p>Made in CANADA&#127809;</p>
         </div>
         <div class="spaceship-container">
-         <div class="item1"><img class="spaceship" src="./images/spaceship.png"></div>
+         <div class="item1"><img class="spaceship" src="./images/spaceship1.png"></div>
         </div>
       </div>
     </div>

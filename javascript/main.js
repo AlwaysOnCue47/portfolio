@@ -174,6 +174,7 @@ class CircleMaker2{
       if (this === circles[i]) continue;
       if (getDistance(this.x, this.y, circles[i].x, circles[i].y) - this.radius * 2 < 0) {
         resolveCollision(this, circles[i]);
+        this.color = colors[Math.floor(Math.random()*3)];
     }};
     if (this.x + this.radius >= canvas2.width || this.x - this.radius <= 0){
       this.velocity.x = -this.velocity.x
@@ -181,9 +182,10 @@ class CircleMaker2{
     if (this.y + this.radius >= canvas2.height || this.y - this.radius <= 0) {
       this.velocity.y = -this.velocity.y
     };
-    this.draw();
+    
     this.x += this.velocity.x;
     this.y += this.velocity.y;
+    this.draw();
   }
 };
 
@@ -193,7 +195,7 @@ let colors = ['red', 'green', 'blue'];
 for (let i = 0; i < 6; i++) {
   let x = (Math.random()*100) + 30;
   let y = (Math.random()*60) +20;
-  let color = colors[Math.floor(Math.random()*4)];
+  let color = colors[Math.floor(Math.random()*3)];
   circles.push(new CircleMaker2(x, y, 15, color));
   circles[i].draw();
 }
