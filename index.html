@@ -127,21 +127,21 @@
               <p>
                 I've put together a couple of small programs to demonstrate some of the aspects of Object Oriented Programming. This program makes use of JavaScript's canvas element. A single Class Constructor or "blueprint" is used to define the objects. In this case circles. Using variables for X and Y coordinates plus a radius length and fill colour the constructor has all the properties needed to draw a circle of any size and colour anywhere on the canvas.
               </p>
-              <div><img style="margin-top: 10px; margin-bottom: 10px;"  src="./images/Capture2.PNG" alt="class constructor"></div>
+              <div><img class="demoImage" style="margin-top: 10px; margin-bottom: 10px;"  src="./images/Capture2.PNG" alt="class constructor"></div>
               <p> In addition to the object's properties each object has it's own behaviour. One follows the mouse postion and the other changes colour when it detects contact (or collision) with the other object.</p>
             </div>
             <div class="demoCardTextBox">
               <p>
                 How does the object know when a collision has taken place? Why using trigonometry of course. Imagine a right angle triangle being drawn from the centre of one circle to the centre of the other circle.
               </p>            
-              <div><img src="./images/Capture1.png" style="margin-top: 10px; margin-bottom: 10px;" alt="Illustration of right angles between objects"></div>
+              <div><img class="demoImage" src="./images/Capture1.png" style="margin-top: 10px; margin-bottom: 10px;" alt="Illustration of right angles between objects"></div>
               <p>Since the program has the value for each circle's X and Y coordinates the exact lengths of the triangles horizontal and vertical sides can be easily determined. With that information we can use a simple trigonometry formula to calculate the length of the unknown side. When that length is less than the sum of each circles radius then a collision has occured. </p>
               
             </div>
             <div class="demoCardTextBox">
-              <div><img style="margin-top: 10px; margin-bottom: 10px;" src="./images/Capture4.PNG" alt="Get distance equation"></div>
+              <div><img class="demoImage" style="margin-top: 10px; margin-bottom: 10px;" src="./images/Capture4.PNG" alt="Get distance equation"></div>
               <p>Give it a try!</p>
-              <div><canvas id="canvas1"></canvas></div>
+              <div class="canvasContainer"><canvas id="canvas1"></canvas></div>
               <p>Using this simple collision detection formula, or object behaviour, we can program the circles to do more than simply change colour. If we give the circles  variables for velocity in the X and Y directions with a little bit more trigonometry the circles can bounce off each other and the sides of the canvas. 
               Check out the<a class="nextSlide" onclick="plusSlides(1)"> NEXT SLIDE. </a>
               </p>
@@ -161,13 +161,13 @@
               <p>
                 At the same time each circle will calculate it's distance to every other circle on the canvas. Every time your browser refreshes the screen, usually 60 times per second, every circle will update it's position and check it's distance to all the other circles.  
               </p> 
-              <div><img style="margin-top: 10px;" src="./images/Capture3.PNG" alt="class constructor"></div>
+              <div><img class="demoImage" style="margin-top: 10px;" src="./images/Capture3.PNG" alt="class constructor"></div>
             </div>
             <div class="demoCardTextBox">
               <p>
                  When contact with another circle is detected some slightly more advanced trigonometry is used to calculate the resulting direction and velocities.
               </p>
-              <div><canvas id="canvas2"></canvas></div>
+              <div class="canvasContainer"><canvas id="canvas2"></canvas></div>
               <p>
                 Using some of these simple concepts combined with a little imagination all sorts of applications or games can be created! Check out the<a class="nextSlide" onclick="plusSlides(1)"> NEXT SLIDE </a> for my game demo! 
               </p>
@@ -185,7 +185,7 @@
             <div class="demoCardTextBox">
               <p>Give it a try! Click on the game image. It will open in a new tab</p>
               <div>
-                <a href="./betaGame1.html" target="_blank"><img style="width: 330px; margin-top: 10px;" src="./images/betaGameScreenCapture.png" alt="Game Screen Capture" ></a>
+                <a href="./betaGame1.html" target="_blank"><img class="demoImage" style="margin-top: 10px;" src="./images/betaGameScreenCapture.png" alt="Game Screen Capture" ></a>
               </div>
             </div>            
           </div>

@@ -377,6 +377,10 @@ nav .homeLink{
   box-shadow: 2px 2px 4px #141414;
 }
 
+.demoImage {
+  max-width: 350px;
+}
+
   /*                         ---------- Slideshow container ---------- */
   .slideshow-container {
     position: relative;
@@ -861,6 +865,17 @@ input[name=comment] {
 
   #aboutSectionRow {
     font-size: small;
+  }
+
+  .demoImage {
+  max-width: 100%;
+  }
+
+
+  .canvasContainer {
+    max-width: 100%;
+    overflow: scroll;
+    
   }
 
  
